@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*for question 2*/
+        img {
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /*for question 3*/
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /*For question 4*/
+        #myImage {
+            width: 300px;
+            transition: transform 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        #myImage:hover {
+            transform: scale(1.01);
+        }
+
+        /*for question 5*/
+        #counter {
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Question 1-->
+    <div>
+        <a href="#" id="myLink" onclick="handleLinkClick()">Click me!</a>
+    </div>
+
+    <!--Question 2-->
+    <div>
+        <h4>Click on image</h4>
+        <img src="mobile1.jpeg" alt="Mobile 1" onclick="showMessage('You clicked Mobile 1!')">
+        <img src="mobile2.jpeg" alt="Mobile 2" onclick="showMessage('You clicked Mobile 2!')">
+        <img src="mobile3.jpeg" alt="Mobile 3" onclick="showMessage('You clicked Mobile 3!')">
+    </div>
+
+    <!--Question 3-->
+    <table id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>101</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Doe</td>
+            <td>102</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Marks</td>
+            <td>103</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>104</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Charles</td>
+            <td>105</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>106</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Rune</td>
+            <td>107</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Billy</td>
+            <td>108</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Rhys</td>
+            <td>109</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Warner</td>
+            <td>110</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+    </table>
+
+    <!--Question 4-->
+    <img id="myImage" src="image1.jpeg" alt="First Image" onmouseover="changeImage()" onmouseout="resetImage()">
+
+    <!--Question 5-->
+    <h4>Counter: </h4>
+    <div id="counter">0</div>
+    <button onclick="increaseCounter()">Increase</button>
+    <button onclick="decreaseCounter()">Decrease</button>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
